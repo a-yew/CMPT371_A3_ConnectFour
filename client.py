@@ -58,7 +58,7 @@ def startClient():
                 displayBoard(msg["board"])
             
                 # check for terminating conditions from server
-                if msg["type"] != "ongoing":
+                if msg["status"] != "ongoing":
                     print(f"Game Over: {msg['status']}")
                     client.close()
                     sys.exit(0)
@@ -71,7 +71,7 @@ def startClient():
                     col = input("Enter column number to drop token: ") 
                     
                     # package player's move coordinates into MOVE packet
-                    moveMsg = json.dumps({"type": "MOVE", "col": col}) + '\n'
+                    moveMsg = json.dumps({"type": "MOVE", "col": int(col)}) + '\n'
                     client.sendall(moveMsg.encode('utf-8'))
                     
                 else: 
