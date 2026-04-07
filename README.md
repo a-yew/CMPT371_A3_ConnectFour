@@ -9,7 +9,7 @@ Group Members
 | Name |  Student ID  | Email |
 |:-----|:--------:|------:|
 | Jien Lynn Yew (Alexis) | 301576314| jly4@sfu.ca |
-| Emily Quan |  student-id | email |
+| Emily Quan |  301584703 | enq@sfu.ca |
 
 # 1. Project Overview & Description
 This project is a multiplayer Connect-4 game built using Python's Socket API (TCP). It allows two distinct clients to connect to a central server, be matched into a game lobby, and play against each other in real-time. The server handles the game logic, board state validation, and win-condition checking, ensuring that clients cannot cheat by modifying their local game state.
