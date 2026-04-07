@@ -15,29 +15,20 @@ PORT = 5050
 
 
 # display connect-four board
-def displayBoard():
-
-# REMOVE temp test initial board state
-    board = []
-
-    for row in range(6):
-        row = []
-
-        for col in range(7):
-            row.append('.')
-        
-        board.append(row)
-
+def displayBoard(board):
+   
     for row in board: 
         print (" ".join(row))
+    
+    print("0 1 2 3 4 5 6\n")
 
-"""
 # Code from CMPT 371 Python Socket Programming Tutorial
 # client execution loop
 def startClient(): 
     # initialize IPv4 and TCP socket
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    
+    client.connect((HOST, PORT))
+
     # initiate TCP handshake and send a connection request to server
     client.sendall(json.dumps({"type": "CONNECT"}).encode('utf-8'))
     print("Connected to game. Waiting for Player 2 to join")
@@ -58,8 +49,8 @@ def startClient():
             # assign player roles
             if msg["type"] == "WELCOME":
     
-                # payload format is "Player 1" or "Player 2"
-                player = msg["payload"][-1]
+                # payload format is "Player R" or "Player Y"
+                playerRole = msg["payload"][-1]
                 print(f"Match found. You are Player {playerRole}.")
             
             # update game state
@@ -67,7 +58,7 @@ def startClient():
                 displayBoard(msg["board"])
             
                 # check for terminating conditions from server
-                if msg["type"] != "ongoing"
+                if msg["type"] != "ongoing":
                     print(f"Game Over: {msg['status']}")
                     client.close()
                     sys.exit(0)
@@ -77,19 +68,16 @@ def startClient():
                     print("Your turn.")
                     
                     # validate game state 
-                    r_str, c_str = input("Enter row and column number to drop token (e.g. '1 1'): ".split()
-                    
+                    col = input("Enter column number to drop token: ") 
                     
                     # package player's move coordinates into MOVE packet
-                    moveMsg = json.dumps({"type": "MOVE", "row": int(r_str), "col": int(c_str) + '\n'
-                    client.sendall(moveMsg.encode('utf-8')
+                    moveMsg = json.dumps({"type": "MOVE", "col": col}) + '\n'
+                    client.sendall(moveMsg.encode('utf-8'))
                     
-                    else: 
-                        print("Waiting for opponent's move.")
+                else: 
+                    print("Waiting for opponent's move.")
 
     client.close()
-"""
 
 if __name__=="__main__": 
-    displayBoard()
-    # startClient()
+    startClient()
