@@ -21,7 +21,6 @@ COLS = 7
 # holds connected client sockets until opponent joins
 matchQueue = []
 
-
 # board functions
 def createBoard():
     board = []
@@ -115,7 +114,6 @@ def checkWinner(board):
 
     # nobody has won yet, so keep playing
     return None
-
 
 # game session
 # referenced demo code mainly
@@ -228,7 +226,7 @@ def start_server():
                     player_y = matchQueue.pop(0)
                     print("[MATCH] Two players found. Starting game session...")
  
-                    t = threading.Thread(target=gameSession, args=(player_r, player_y)).start()
+                    t = threading.Thread(target=gameSession, args=(player_r, player_y))
                     t.start()
  
     except KeyboardInterrupt:
