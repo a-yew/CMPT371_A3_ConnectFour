@@ -42,6 +42,7 @@ Limitation: As our application assumes the user is well-behaved, it is vulnerabl
 
 # 3. Video Demo
 Our 2-minute video demonstration covering connection establishment, data exchange, real-time gameplay, and process termination can be viewed below: 
+[Link to Connect-4 Video Demo](https://youtu.be/kGqRFVNWuCs)
 
 # 4. Prerequisites (Fresh Environment)
 To run this project, you need:
@@ -93,6 +94,7 @@ We designed a custom application-layer protocol for data exchange usin JSON over
   
 # 7. Academic Integrity & References
 - Code Origin: The socket boilerplate was adapted from Mariam's Tic-Tac-Toe CMPT371_A3_Socket_Programming repository and TA-guided tutorials. The GUI, core multithreaded game logic, protocol, and state management were written by the group.
+- GenAI Usage: Claude was used to assist in polishing the coin drop animation and UI.
 - References:
     - [Mariam's Socket Programming Repository](https://github.com/mariam-bebawy/CMPT371_A3_Socket_Programming)
     - [Mariam's Socket Programming Tic-Tac-Toe Tutorial Playlist](https://www.youtube.com/playlist?list=PL-8C2cUhmkO1yWLTCiqf4mFXId73phvdx&si=FIq3OxypbBeWHhYm)
