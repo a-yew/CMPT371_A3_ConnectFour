@@ -31,7 +31,7 @@ Solution: As message boundaries are not preserved due to TCP's data streaming, w
 
 ```
 for chunk in data.strip().split('\n'):
-        if not chunk: continue`
+        if not chunk: continue
 ```
 Limitation: Our solution is limited as it does not account for additional messages received in the same packet. To improve our solution further, we could iteratively process incoming JSON payloads.
 
@@ -57,7 +57,7 @@ Download the project folder, open your terminal and navigate to the project fold
 
 ```
 python server.py
-# Console output: "[STARTING] Connect 4 server listening on 127.0.0.1:5050}"
+# Console output: "[STARTING] Connect 4 server listening on 127.0.0.1:5050"
 ```
 
 ## Step 2: Connect Player 1 (R)
@@ -76,7 +76,7 @@ python client.py --gui
 # GUI output: "Waiting for opponent's move..."
 ```
 ## Step 4: Gameplay
-1. Player R clicks a button (0-6) on the bottom and chooses to drop their token in the column
+1. Player R clicks a button (0-6) on the bottom or chooses to drop their token in the column directly
 2. The server updates the board on both screen's to reflect the player's selection
 3. Player Y takes their turn
 4. Gameplay loop continues until win or draw states are achieved
@@ -100,3 +100,13 @@ We designed a custom application-layer protocol for data exchange usin JSON over
 - References:
     - [Mariam's Socket Programming Repository](https://github.com/mariam-bebawy/CMPT371_A3_Socket_Programming)
     - [Mariam's Socket Programming Tic-Tac-Toe Tutorial Playlist](https://www.youtube.com/playlist?list=PL-8C2cUhmkO1yWLTCiqf4mFXId73phvdx&si=FIq3OxypbBeWHhYm)
+    - [Python Network Programming - TCP/IP Socket Programming Playlist](https://www.youtube.com/playlist?list=PLhTjy8cBISErYuLZUvVOYsR1giva2payF)
+    - [A Complete Guide to Socket Programming in Python](https://www.datacamp.com/tutorial/a-complete-guide-to-socket-programming-in-python)
+
+    - [Create a GUI Using Tkinter and Python](https://www.pythonguis.com/tutorials/create-gui-tkinter/)
+    - [Python GUI Programming: Your Tkinter Tutorial](https://realpython.com/python-gui-tkinter/)
+    - [Tk Docs](https://tkdocs.com/tutorial/text.html)
+    - [Graphical user interfaces with Tk¶](https://docs.python.org/3/library/tk.html)
+    - [Stack Overflow - How can I use tkinter to make an animation?](https://stackoverflow.com/questions/70298196/how-can-i-use-tkinter-to-make-an-animation)
+    - [PyPI - Tk Animations](https://pypi.org/project/tk-animations/)
+    - [Python Course - Canvas Widgets in Tkinter](https://python-course.eu/tkinter/canvas-widgets-in-tkinter.php)
