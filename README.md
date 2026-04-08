@@ -76,8 +76,8 @@ python client.py --gui
 # GUI output: "Waiting for opponent's move..."
 ```
 ## Step 4: Gameplay
-1. Player R clicks a button (0-6) on the bottom and chooses to drop their token in the column
-2. The server updates the board on both screen's to reflect the player's selection
+1. Player R selects a column and drop their token
+2. The server updates the board on both screens to reflect the player's selection
 3. Player Y takes their turn
 4. Gameplay loop continues until win or draw states are achieved
 5. The popup "Player {Role} wins!" appears once either player places four tokens in row (horizontally/ diagonally) and client sessions terminates
