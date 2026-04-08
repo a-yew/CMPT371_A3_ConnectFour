@@ -62,7 +62,7 @@ python server.py
 ```
 
 ## Step 2: Connect Player 1 (R)
-Keep the server running and open a new terminal window. Navigate to the project folder and run the client script to start the first client, a GUI window should popup.
+Keep the server running and open a new terminal window. Navigate to the project folder and run the client script to start the first client (ensure the GUI flag is used), a GUI window should popup.
 
 ```
 python client.py --gui 
@@ -70,7 +70,7 @@ python client.py --gui
 ```
 
 ## Step 3: Connect Player 2 (Y)
-Keep the server and first client running and open a second terminal window. Navigate to the project folder and run the client script again to start the second client, a GUI window should popup.
+Keep the server and first client running and open a second terminal window. Navigate to the project folder and run the client script again to start the second client (ensure the GUI flag is used), a GUI window should popup.
 
 ```
 python client.py --gui 
