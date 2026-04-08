@@ -237,14 +237,14 @@ class ConnectFourGUI:
                 btnFrame,
                 text=str(col), width=4,
                 font=("Courier New", 12, "bold"),
-                bg=RED_COLOUR, fg=TEXT_LIGHT,
+                bg=RED_COLOUR, fg=GRID_COLOUR,
                 activebackground=YEL_COLOUR, activeforeground=BG,
                 relief=tk.FLAT, state=tk.DISABLED,
                 command=lambda c=col: self.sendMove(c),
             )
             btn.pack(side=tk.LEFT, padx=6)
-            btn.bind("<Enter>", lambda e, b=btn: b.config(bg=YEL_COLOUR, fg=BG))
-            btn.bind("<Leave>", lambda e, b=btn: b.config(bg=RED_COLOUR, fg=TEXT_LIGHT))
+            btn.bind("<Enter>", lambda e, b=btn: b.config(bg=YEL_COLOUR, fg=HIGHLIGHT))
+            btn.bind("<Leave>", lambda e, b=btn: b.config(bg=RED_COLOUR, fg=GRID_COLOUR))
             self.colButtons.append(btn)
 
     # board helpers
