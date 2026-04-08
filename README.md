@@ -41,6 +41,7 @@ Limitation: As our application assumes the user is well-behaved, it is vulnerabl
 
 # 3. Video Demo
 Our 2-minute video demonstration covering connection establishment, data exchange, real-time gameplay, and process termination can be viewed below: 
+
 [Link to Connect-4 Video Demo](https://youtu.be/kGqRFVNWuCs)
 
 # 4. Prerequisites (Fresh Environment)
@@ -61,7 +62,7 @@ python server.py
 ```
 
 ## Step 2: Connect Player 1 (R)
-Keep the server running and open a new terminal window. Navigate to the project folder and run the client script to start the first client, a GUI window should popup.
+Keep the server running and open a new terminal window. Navigate to the project folder and run the client script to start the first client (ensure the GUI flag is used), a GUI window should popup.
 
 ```
 python client.py --gui 
@@ -69,15 +70,15 @@ python client.py --gui
 ```
 
 ## Step 3: Connect Player 2 (Y)
-Keep the server and first client running and open a second terminal window. Navigate to the project folder and run the client script again to start the second client, a GUI window should popup.
+Keep the server and first client running and open a second terminal window. Navigate to the project folder and run the client script again to start the second client (ensure the GUI flag is used), a GUI window should popup.
 
 ```
 python client.py --gui 
 # GUI output: "Waiting for opponent's move..."
 ```
 ## Step 4: Gameplay
-1. Player R clicks a button (0-6) on the bottom or chooses to drop their token in the column directly
-2. The server updates the board on both screen's to reflect the player's selection
+1. Player R selects a column and drop their token
+2. The server updates the board on both screens to reflect the player's selection
 3. Player Y takes their turn
 4. Gameplay loop continues until win or draw states are achieved
 5. The popup "Player {Role} wins!" appears once either player places four tokens in row (horizontally/ diagonally) and client sessions terminates
