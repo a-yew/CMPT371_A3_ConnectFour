@@ -103,11 +103,10 @@ We designed a custom application-layer protocol for data exchange usin JSON over
     - [Mariam's Socket Programming Tic-Tac-Toe Tutorial Playlist](https://www.youtube.com/playlist?list=PL-8C2cUhmkO1yWLTCiqf4mFXId73phvdx&si=FIq3OxypbBeWHhYm)
     - [Python Network Programming - TCP/IP Socket Programming Playlist](https://www.youtube.com/playlist?list=PLhTjy8cBISErYuLZUvVOYsR1giva2payF)
     - [A Complete Guide to Socket Programming in Python](https://www.datacamp.com/tutorial/a-complete-guide-to-socket-programming-in-python)
-
     - [Create a GUI Using Tkinter and Python](https://www.pythonguis.com/tutorials/create-gui-tkinter/)
     - [Python GUI Programming: Your Tkinter Tutorial](https://realpython.com/python-gui-tkinter/)
     - [Tk Docs](https://tkdocs.com/tutorial/text.html)
-    - [Graphical user interfaces with Tk¶](https://docs.python.org/3/library/tk.html)
+    - [Graphical user interfaces with Tk](https://docs.python.org/3/library/tk.html)
     - [Stack Overflow - How can I use tkinter to make an animation?](https://stackoverflow.com/questions/70298196/how-can-i-use-tkinter-to-make-an-animation)
     - [PyPI - Tk Animations](https://pypi.org/project/tk-animations/)
     - [Python Course - Canvas Widgets in Tkinter](https://python-course.eu/tkinter/canvas-widgets-in-tkinter.php)
