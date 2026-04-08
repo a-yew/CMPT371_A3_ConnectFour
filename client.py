@@ -375,8 +375,11 @@ class ConnectFourGUI:
                              sub="Maybe someone will win next time.")
             self.myTurn = False
             self.disableAllBtns()
-            messagebox.showinfo("Game Over", status)
-            self.client.close()
+            # delay popup so tkinter has time to render the winning token on the board before messagebox blocks main thread
+            def showGameOver():
+                messagebox.showinfo("Game Over", status)
+                self.client.close()
+            self.root.after(300, showGameOver)
             return
 
         self.myTurn = (turn == self.playerRole)
