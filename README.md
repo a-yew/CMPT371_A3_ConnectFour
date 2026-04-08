@@ -31,7 +31,7 @@ Solution: As message boundaries are not preserved due to TCP's data streaming, w
 
 ```
 for chunk in data.strip().split('\n'):
-        if not chunk: continue`
+        if not chunk: continue
 ```
 Limitation: Our solution is limited as it does not account for additional messages received in the same packet. To improve our solution further, we could iteratively process incoming JSON payloads.
 
