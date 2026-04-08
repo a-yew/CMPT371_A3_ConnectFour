@@ -37,8 +37,7 @@ Limitation: Our solution is limited as it does not account for additional messag
 
 - Input Validation and Security
 
-
-Limitation: As our application assumes the user is well-behaved, it is vulnerable to exploits from users that send invalid data types or malformed JSON data. To improve our solution further, we could implement validation on the client-side to ensure data is well-formatted. 
+Limitation: As our application assumes the user is well-behaved, it is vulnerable to exploits from users that send malformed JSON data to the server. To improve our solution further, we could implement validation on the client-side to ensure data is well-formatted. 
 
 # 3. Video Demo
 Our 2-minute video demonstration covering connection establishment, data exchange, real-time gameplay, and process termination can be viewed below: 
@@ -80,7 +79,10 @@ python client.py --gui
 1. Player R clicks a button (0-6) on the bottom and chooses to drop their token in the column
 2. The server updates the board on both screen's to reflect the player's selection
 3. Player Y takes their turn
-4. The popup Player {Role} appears once either player places four tokens in row (horizontally/ diagonally)
+4. Gameplay loop continues until win or draw states are achieved
+5. The popup "Player {Role} wins!" appears once either player places four tokens in row (horizontally/ diagonally) and client sessions terminates
+
+To terminate server session use Ctrl-C in terminal. 
 
 # 6. Technical Protocol Details (JSON over TCP)
 We designed a custom application-layer protocol for data exchange usin JSON over TCP:
