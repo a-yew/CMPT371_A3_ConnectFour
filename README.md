@@ -41,6 +41,7 @@ Limitation: As our application assumes the user is well-behaved, it is vulnerabl
 
 # 3. Video Demo
 Our 2-minute video demonstration covering connection establishment, data exchange, real-time gameplay, and process termination can be viewed below: 
+
 [Link to Connect-4 Video Demo](https://youtu.be/kGqRFVNWuCs)
 
 # 4. Prerequisites (Fresh Environment)
